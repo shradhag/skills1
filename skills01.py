@@ -4,15 +4,17 @@ number_list = [-5, 6, 4, 8, 15, 16, 23, 42, 2, 7]
 word_list = [ "What", "about", "the", "Spam", "sausage", "spam", "spam", "bacon", "spam", "tomato", "and", "spam"]
 
 # Write a function that takes a list of numbers and returns a new list with only the odd numbers.
-def all_odd(number_list):
-    new_list = []
-    for i in number_list:
-        if i % 2 != 0:
-            new_list.append(i)
-    print new_list  
-    return new_list
+# def all_odd(number_list):
+    # new_list = []
+    # for i in number_list:
+    #     if i % 2 != 0:
+    #         new_list.append(i)
+    # print new_list  
+    # return new_list
 
-# # Write a function that takes a list of numbers and returns a new list with only the even numbers.
+
+
+# Write a function that takes a list of numbers and returns a new list with only the even numbers.
 def all_even(number_list):
     new_list = []
     for i in number_list:
@@ -23,25 +25,41 @@ def all_even(number_list):
 
 # Write a function that takes a list of strings and returns a new list with all strings of length 4 or greater.
 def long_words(word_list):
-    new_list = []
-    for i in word_list:
-        if len(i) >= 4:
-            new_list.append(i)
-    print new_list
-    return new_list
 
-# Write a function that finds the smallest element in a list of integers and returns it.
+   # new_list = []
+    # for i in word_list:
+    #     if len(i) >= 4:
+    #         new_list.append(i)
+    # print new_list
+    # return new_list
+
+    # new_list = [each for each in word_list if len(each) >= 4]
+    # print new_list
+    pass
+#long_words(word_list)
+
+# Write a function that finds the smallest element in a list of integers and returns it. 
 def smallest(number_list):
-    smallest = min(number_list)
-    print smallest
-    return smallest
+    the_smallest= [x for x in number_list if x == min(number_list)]
+    print the_smallest
+ 
+#smallest(number_list)
+#     smallest = min(number_list)
+#     print smallest
+#     return smallest
 
-# Write a function that finds the largest element in a list of integers and returns it.
+#     the_smallest= [x for x in number_list if x == min(number_list)]
+#     print the_smallest
+
+# smallest(number_list) 
+# # Write a function that finds the largest element in a list of integers and returns it.
 def largest(number_list):
-    maximum = max(number_list) 
-    print maximum
-    return maximum
+    # maximum = max(number_list) 
+    # print maximum
+    # return maximum
 
+    the_biggest = [ x for x in number_list if x == max(number_list)]
+    print the_biggest 
 #largest(number_list)
 
 # Write a function that takes a list of numbers and returns a new list of all those numbers divided by two.
@@ -55,13 +73,16 @@ def halvesies(number_list):
 
 # Write a function that takes a list of words and returns a list of all the lengths of those words.
 def word_lengths(word_list):
-    new_list = []
-    for i in word_list:
-        new_list.append(len(i))
-    print new_list
-    return new_list
+    # new_list = []
+    # for i in word_list:
+    #     new_list.append(len(i))
+    # print new_list
+    # return new_list
+    list_of_lengths= [len(x) for x in word_list]
+    print list_of_lengths
 
-#word_lengths(word_list)
+
+word_lengths(word_list)
 
 # Write a function (using iteration) that sums all the numbers in a list.
 def sum_numbers(number_list):
@@ -106,5 +127,3 @@ def average(number_list):
 
     print the_average
     return the_average
-
-average(number_list)
